@@ -16,3 +16,15 @@ function PlanetDetails() {
         })
         .catch(() => navigate("/not-found"));
     }, [index, navigate]);
+
+    const handleDelete = () => {
+        const httpOptions = { method: "DELETE" };
+    
+        fetch(`${API}/planets/${index}`, httpOptions)
+          .then((res) => {
+            console.log(res);
+            alert("Planet was deleted successfully!");
+            navigate('/planets');
+          })
+          .catch((err) => console.error(err));
+      };
