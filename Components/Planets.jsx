@@ -5,7 +5,7 @@ const API = import.meta.env.VITE_BASE_URL;
 
 function Planets() {
     const [planets, setPlanets] = useState([]);
-    const [totalPosts, setTotalPlanets] = useState(0);
+    const [totalPlanets, setTotalPlanets] = useState(0);
   
     useEffect(() => {
       fetch(`${API}/planets`) 
@@ -19,7 +19,14 @@ function Planets() {
     }, []);
 
     return (
-
+      <div className="home-container">
+      <h1>Total Planets: {totalPlanets}</h1>
+        <section>
+            {planets.map((planet) => {
+                return <Planet key={planet.id} planet={planet} />
+            })}
+        </section>
+    </div>
     )
 }
 
