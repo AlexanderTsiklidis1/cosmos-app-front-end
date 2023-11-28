@@ -23,10 +23,10 @@ function App() {
         <main className="main">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/posts" element={<Index />} />
-            <Route path="/posts/new" element={<New />} />
-            <Route path="/posts/:index" element={<Show />} />
-            <Route path="/posts/:index/edit" element={<Edit />} />
+            <Route path="/planets" element={<Index />} />
+            <Route path="/planets/new" element={<New />} />
+            <Route path="/planets/:index" element={<Show />} />
+            <Route path="/planets/:index/edit" element={<Edit />} />
             <Route path="*" element={<FourOFour />} />
           </Routes>
         </main>
