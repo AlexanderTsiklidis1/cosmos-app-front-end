@@ -54,3 +54,4 @@ function PlanetDetails() {
         </article>
       );
     }
+export default PlanetDetails
