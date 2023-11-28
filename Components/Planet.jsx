@@ -17,9 +17,6 @@ function Planet({ planet }) {
                     <p className="card-text">{planet.description}</p>
                     <p className="card-text">Discovered: {planet.date_of_discovery}</p>
                     <p className="card-text">Diameter: {planet.diameter_km} km</p>
-                    <p className="card-text">Mass: {planet.mass_kg} kg</p>
-                    <p className="card-text">Avg Temperature: {planet.avg_temperature_celsius} °C</p>
-                    <p className="card-text">Is Current Planet: {planet.is_current_planet ? "Yes" : "No"}</p>
                 </div>
             </div>
         </Link>
