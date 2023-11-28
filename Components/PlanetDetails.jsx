@@ -32,11 +32,7 @@ function PlanetDetails() {
       return (
         <article className="home-container">
           
-          <img className="app-profile_pic" src = {post.profile_pic ? post.profile_pic: "src/assets/default_profile_pic.jpeg"} />
-          <h5 className="app-heading">
-            Post Message: {post.postmessage}
-          </h5>
-          <img className="app-post_pic" src = {post.post_pic ? post.post_pic: "src/assets/default_post_pic.jpeg"} />
+          
           <div className="showNavigation">
             <div>
               {" "}
