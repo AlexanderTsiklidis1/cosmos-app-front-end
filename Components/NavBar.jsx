@@ -8,10 +8,10 @@ export default function NavBar() {
           Home
         </Link>
         <Link to="/planets" className="nav-link">
-          Posts
+          Planets
         </Link>
         <Link to="/planets/new" className="nav-link">
-          New Post
+          New Planet
         </Link>
       </div>
     </nav>
