@@ -9,13 +9,11 @@ function Planet({ planet }) {
                     <img
                         className="planet_picture"
                         src={planet.planet_picture || "src/assets/default_planet_pic.jpeg"}
-                        alt={`${planet.planetname} Planet`}
                     />
                     <span className="planet_name">{planet.planetname}</span>
                 </div>
                 <div className="card-body">
                     <p className="card-text">{planet.description}</p>
-                    <p className="card-text">Discovered: {planet.date_of_discovery}</p>
                     <p className="card-text">Diameter: {planet.diameter_km} km</p>
                 </div>
             </div>

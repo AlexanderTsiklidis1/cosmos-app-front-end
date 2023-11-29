@@ -3,8 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'
 import Footer from '../Components/Footer';
 import Edit from '../Pages/Edit';
-import SidebarLeft from '../Components/SideBarLeft';
-import SidebarRight from '../Components/SideBarRight';
 import FourOFour from '../Pages/FourOFour';
 import Home from '../Pages/Home';
 import Index from '../Pages/Index';
@@ -19,7 +17,7 @@ function App() {
     <Router>
       <NavBar />
       <div className="main-content">
-        <SidebarLeft />
+        
         <main className="main">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -30,7 +28,7 @@ function App() {
             <Route path="*" element={<FourOFour />} />
           </Routes>
         </main>
-        <SidebarRight />
+      
       </div>
       <Footer />
     </Router>

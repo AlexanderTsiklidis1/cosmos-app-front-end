@@ -4,23 +4,23 @@ const API = import.meta.env.VITE_BASE_URL;
 
 function PlanetDetails() {
     const [planet, setPlanet] = useState({});
-    const { id } = useParams();
+    const { index } = useParams();
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(`${API}/planets/${id}`)
+        fetch(`${API}/planets/${index}`)
             .then((response) => response.json())
             .then((fetchedPlanet) => {
                 console.log(fetchedPlanet);
                 setPlanet(fetchedPlanet);
             })
             .catch(() => navigate("/not-found"));
-    }, [id, navigate]);
+    }, [index, navigate]);
 
     const handleDelete = () => {
         const httpOptions = { method: "DELETE" };
 
-        fetch(`${API}/planets/${id}`, httpOptions)
+        fetch(`${API}/planets/${index}`, httpOptions)
             .then((res) => {
                 console.log(res);
                 alert("Planet was deleted successfully!");
@@ -38,9 +38,6 @@ function PlanetDetails() {
             <h5 className="app-heading">
                 Description: {planet.description}
             </h5>
-            <p className="app-paragraph">
-                Date of Discovery: {planet.date_of_discovery}
-            </p>
             <p className="app-paragraph">
                 Diameter: {planet.diameter_km} km
             </p>
@@ -62,7 +59,7 @@ function PlanetDetails() {
                 </div>
                 <div>
                     {" "}
-                    <Link to={`/planets/${id}/edit`}>
+                    <Link to={`/planets/${index}/edit`}>
                         <button className="button" style={{ padding: "10px" }}>Edit</button>
                     </Link>
                 </div>
