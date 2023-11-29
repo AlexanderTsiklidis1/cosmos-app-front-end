@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 const API = import.meta.env.VITE_BASE_URL;
 
 function PlanetNewForm() {
-    const [planet, setPlanet] = useState({
-          planetname: "",
-          description: "",
-          is_current_planet: true,
-          diameter_km: 0,
-          mass_kg: 0,
-          avg_temperature_celsius: 0,
-          planet_picture: "",
-       });
+  const [planet, setPlanet] = useState({
+    planetname: "",
+    description: "",
+    is_current_planet: true,
+    diameter_km: 0,
+    mass_kg: 0,
+    avg_temperature_celsius: 0,
+    planet_picture: "",
+  });
 
   const navigate = useNavigate();
 
@@ -21,17 +21,19 @@ function PlanetNewForm() {
   };
 
   const addPlanet = () => {
+    console.log("Planet to be added:", planet);
     const httpOptions = {
       method: "POST",
-      body: JSON.stringify(post),
+      body: JSON.stringify(planet),
       headers: {
         "Content-type": "application/json",
       },
     };
 
     fetch(`${API}/planets`, httpOptions)
-      .then((res) => {
-        console.log(res);
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("Response from server:", data);
         alert(`${planet.planetname} was added to the database!`);
         navigate("/planets");
       })
@@ -42,6 +44,7 @@ function PlanetNewForm() {
     event.preventDefault();
     addPlanet();
   };
+
   return (
     <div className="new-planet-form">
       <form onSubmit={handleSubmit}>

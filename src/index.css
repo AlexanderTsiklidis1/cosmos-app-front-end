@@ -1,6 +1,6 @@
 /* For background image of Space */
 body {
-  background-image: url("src/assets/Space-Background-Images.jpg");
+  background: url("src/assets/Space-Background-Images.jpg");
 }
 /* Navbar styling */
 .navbar {
@@ -135,12 +135,13 @@ body {
 }
 
 .underline {
+  text-decoration: underline;
   color: white;
   display: inline-block;
-  font-size: 3rem;
-  text-decoration: underline;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
 }
-
 
 .totalObjects {
   color: white;
@@ -197,3 +198,60 @@ section {
 }
 /* New resource page/component */
 
+
+
+.newPlanetHeader {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.new-planet-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 1rem;
+  color: white;
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+  text-decoration: underline;
+}
+
+input,
+textarea {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.button {
+  background-color: #6c757d;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.button:hover,
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}

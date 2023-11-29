@@ -40,10 +40,16 @@ function PlanetEditForm() {
         "Content-type": "application/json",
       },
     };
-
+  
     fetch(`${API}/planets/${index}`, httpOptions)
-      .then(() => {
-        alert(`${planet.planetname} has been updated!`);
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((updatedPlanet) => {
+        alert(`${updatedPlanet.planetname} has been updated!`);
         navigate(`/planets/${index}`);
       })
       .catch((err) => console.error(err));
