@@ -20,7 +20,7 @@ function Planets() {
 
     return (
       <div className="home-container">
-      <h1>Total Planets: {totalPlanets}</h1>
+      <h1 className="totalObjects">Total Celestial Objects in Database: {totalPlanets}</h1>
         <section>
             {planets.map((planet) => {
                 return <Planet key={planet.id} planet={planet} />
