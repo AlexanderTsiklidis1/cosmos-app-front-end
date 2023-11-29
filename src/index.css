@@ -1,1 +1,66 @@
+/* For background image of Space */
+body {
+  background-image: url("src/assets/Space-Background-Images.jpg");
+}
+/* Navbar styling */
+.navbar {
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
+.nav-link {
+  text-decoration: Bold;
+  color: #fff;
+  font-weight: bold;
+  margin: 0 1rem;
+  padding-right: 8rem;
+  padding-left: 8rem;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  background: grey;
+}
+
+/* Home page styling */
+
+.home-container {
+  text-align: center;
+  margin: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  font-family: 'Arial', sans-serif; 
+}
+
+.welcome-header {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Helvetica', sans-serif; /* Different font for the header */
+}
+
+.description {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'Courier New', monospace; /* Different font for the description */
+}
+
+.feature-list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.feature-item {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 3rem;
+  font-family: 'Verdana', sans-serif; /* Different font for the feature items */
+}
+
+/* Hover effect for feature items */
+.feature-item:hover {
+  color: grey;
+}
