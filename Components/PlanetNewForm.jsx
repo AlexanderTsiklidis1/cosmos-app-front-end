@@ -5,8 +5,14 @@ const API = import.meta.env.VITE_BASE_URL;
 
 function PlanetNewForm() {
     const [planet, setPlanet] = useState({
-       
-    });
+          planetname: "",
+          description: "",
+          is_current_planet: true,
+          diameter_km: 0,
+          mass_kg: 0,
+          avg_temperature_celsius: 0,
+          planet_picture: "",
+       });
 
   const navigate = useNavigate();
 
@@ -38,7 +44,59 @@ function PlanetNewForm() {
   };
   return (
     <div className="new-planet-form">
-      
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="planetname">Planet Name</label>
+        <input
+          id="planetname"
+          type="text"
+          value={planet.planetname}
+          onChange={handleTextChange}
+          placeholder="Planet Name"
+          required
+        />
+        <label htmlFor="description">Description</label>
+        <textarea
+          id="description"
+          value={planet.description}
+          placeholder="Description of the Planet"
+          onChange={handleTextChange}
+          required
+        />
+        <label htmlFor="diameter_km">Diameter (in km)</label>
+        <input
+          id="diameter_km"
+          type="number"
+          value={planet.diameter_km}
+          onChange={handleTextChange}
+          required
+        />
+        <label htmlFor="mass_kg">Mass (in kg)</label>
+        <input
+          id="mass_kg"
+          type="number"
+          value={planet.mass_kg}
+          onChange={handleTextChange}
+          required
+        />
+        <label htmlFor="avg_temperature_celsius">Avg Temperature (°C)</label>
+        <input
+          id="avg_temperature_celsius"
+          type="number"
+          value={planet.avg_temperature_celsius}
+          onChange={handleTextChange}
+          required
+        />
+        <label htmlFor="planet_picture">Planet Picture</label>
+        <input
+          id="planet_picture"
+          type="text"
+          value={planet.planet_picture}
+          placeholder="Link to Planet Picture"
+          onChange={handleTextChange}
+        />
+        <br />
+        <input type="submit" className="submit-button" />
+      </form>
       <Link to="/planets">
         <button className="button">Back to Planets</button>
       </Link>
