@@ -48,7 +48,7 @@ function PlanetNewForm() {
   return (
     <div className="new-planet-form">
       <form onSubmit={handleSubmit}>
-        <label htmlFor="planetname">Planet Name</label>
+        <label htmlFor="planetname">Celestial Object Name</label>
         <input
           id="planetname"
           type="text"
@@ -89,12 +89,12 @@ function PlanetNewForm() {
           onChange={handleTextChange}
           required
         />
-        <label htmlFor="planet_picture">Planet Picture</label>
+        <label htmlFor="planet_picture">Celestial Picture</label>
         <input
           id="planet_picture"
           type="text"
           value={planet.planet_picture}
-          placeholder="Link to Planet Picture"
+          placeholder="Link to Celestial Picture"
           onChange={handleTextChange}
         />
         <br />

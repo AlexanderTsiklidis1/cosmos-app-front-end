@@ -7,11 +7,11 @@ function PlanetEditForm() {
   const [planet, setPlanet] = useState({
     planetname: "",
     description: "",
-    is_current_planet: true,
     diameter_km: 0,
     mass_kg: 0,
     avg_temperature_celsius: 0,
     planet_picture: "",
+    is_current_planet: true,
   });
   const navigate = useNavigate();
 
@@ -23,37 +23,33 @@ function PlanetEditForm() {
     setPlanet({ ...planet, is_current_planet: !planet.is_current_planet });
   };
 
-  useEffect(() => {
-    fetch(`${API}/planets/${index}`)
-      .then((response) => response.json())
-      .then((fetchedPlanet) => {
-        setPlanet(fetchedPlanet);
-      })
-      .catch(() => navigate("/not-found"));
-  }, [index, navigate]);
-
   const updatePlanet = () => {
-    const httpOptions = {
+    console.log(`${API}/planets/${index}`);
+
+    fetch(`${API}/planets/${index}`, {
       method: "PUT",
       body: JSON.stringify(planet),
       headers: {
-        "Content-type": "application/json",
+        "Content-Type": "application/json",
       },
-    };
-  
-    fetch(`${API}/planets/${index}`, httpOptions)
+    })
       .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((updatedPlanet) => {
-        alert(`${updatedPlanet.planetname} has been updated!`);
         navigate(`/planets/${index}`);
       })
-      .catch((err) => console.error(err));
+      .catch((error) => console.error("catch", error));
   };
+
+  // On page load, fill in the form with the bookmark data.
+  useEffect(() => {
+    fetch(`${API}/planets/${index}`)
+      .then((response) => {
+        return response.json();
+      })
+      .then((responseJSON) => {
+        setPlanet(responseJSON);
+      })
+      .catch((error) => console.error(error));
+  }, [index]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -70,7 +66,7 @@ function PlanetEditForm() {
           value={planet.planetname}
           onChange={handleTextChange}
           placeholder="Name of the Planet"
-          required
+          
         />
         <label htmlFor="description">Description</label>
         <textarea
@@ -78,7 +74,7 @@ function PlanetEditForm() {
           value={planet.description}
           placeholder="Description of the Planet"
           onChange={handleTextChange}
-          required
+          
         />
         <label htmlFor="diameter_km">Diameter (in km)</label>
         <input
@@ -86,7 +82,7 @@ function PlanetEditForm() {
           type="number"
           value={planet.diameter_km}
           onChange={handleTextChange}
-          required
+          
         />
         <label htmlFor="mass_kg">Mass (in kg)</label>
         <input
@@ -94,7 +90,7 @@ function PlanetEditForm() {
           type="number"
           value={planet.mass_kg}
           onChange={handleTextChange}
-          required
+          
         />
         <label htmlFor="avg_temperature_celsius">Avg Temperature (°C)</label>
         <input
@@ -102,7 +98,7 @@ function PlanetEditForm() {
           type="number"
           value={planet.avg_temperature_celsius}
           onChange={handleTextChange}
-          required
+          
         />
         <label htmlFor="planet_picture">Planet Picture</label>
         <input

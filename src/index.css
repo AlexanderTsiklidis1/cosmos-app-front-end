@@ -8,6 +8,7 @@ body {
   padding: 2rem;
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 3px solid white
 }
 
 .nav-link {
@@ -23,7 +24,7 @@ body {
 }
 
 .nav-link:hover {
-  background: silver;
+  background: blue;
 }
 
 /* Home page styling */
@@ -132,22 +133,26 @@ body {
 
 .Index {
   text-align: center;
+  border: 2px 
 }
 
 .underline {
   text-decoration: underline;
   color: white;
   display: inline-block;
-  padding-bottom: 0.5rem;
-  margin-bottom: 2rem;
-  font-size: 2rem;
+  margin: 2rem;
+  font-size: 2.5rem;
+
 }
 
 .totalObjects {
   color: white;
+  border: 1px solid silver;
+  
 }
 .totalObjects:hover {
-  color: silver;
+  
+  background-color: blue;
 }
 
 section {
@@ -167,6 +172,7 @@ section {
 
 .card:hover {
   transform: scale(1.1);
+  background-color: blue;
 }
 
 .card-header {
@@ -205,16 +211,15 @@ section {
   font-size: 2rem;
   margin-bottom: 1rem;
   text-align: center;
+  text-decoration: underline;
 }
 
-.new-planet-form {
-  max-width: 600px;
-  margin: 0 auto;
-}
+
 
 form {
   display: flex;
   flex-direction: column;
+  border: 3px solid white;
 }
 
 label {
@@ -224,6 +229,7 @@ label {
   font-size: 1.5rem;
   padding-bottom: 0.5rem;
   text-decoration: underline;
+  text-align: center;
 }
 
 input,
@@ -254,4 +260,291 @@ input[type="submit"] {
 .button:hover,
 input[type="submit"]:hover {
   background-color: #0056b3;
+}
+/* 404 styling  */
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.error-title {
+  font-size: 2em;
+  color: #ff0000
+}
+
+.error-message {
+  font-size: 1.2em;
+  margin-top: 10px;
+  color: #555;
+}
+
+/* Show & PlanetDetails */
+
+.show-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.show-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* PlanetDetails component styling */
+.show-container {
+  text-align: center;
+  margin: 2rem;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+
+.show-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Helvetica', sans-serif;
+  text-decoration: underline;
+}
+
+.planet-details-container {
+  text-align: center;
+  margin: 2rem;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  border: 5px solid silver
+}
+
+.planet-details-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Helvetica', sans-serif;
+  text-decoration: underline;
+}
+
+.planet-details-image {
+  width: 50%;
+  height: auto;
+}
+
+.planet-details-heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'Courier New', monospace;
+  
+}
+
+.planet-details-text {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 1rem;
+  font-family: 'Verdana', sans-serif;
+}
+
+.planet-details-text:hover {
+  color: silver;
+}
+
+.planet-details-navigation {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.planet-details-button {
+  background-color: #6c757d;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border: none;
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.planet-details-button:hover {
+  background-color: #0056b3;
+}
+
+/* edit/planet edit form */
+.edit-heading {
+  color: white;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 2rem
+
+}
+
+/* PlanetEditForm Component Styling */
+
+.Edit {
+  text-align: center;
+  margin: 2rem;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+
+
+
+label {
+  font-weight: bold;
+  margin-top: 1rem;
+  color: white;
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+  text-decoration: underline;
+}
+
+input,
+textarea {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="number"] {
+  width: 100%;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border: none;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.button {
+  background-color: #6c757d;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border: none;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+  .show-title {
+    font-size: 1.5em;
+  }
+
+  
+  body {
+    padding: 10px;
+  }
+
+  .navbar {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+
+ 
+}
+
+
+
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .show-title {
+    font-size: 2em;
+  }
+
+  
+  body {
+    padding: 30px;
+  }
+
+  .navbar {
+    padding: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .nav-link {
+    font-size: 1.5rem;
+    padding-right: 8rem;
+    padding-left: 8rem;
+  }
+
+  
+}
+
+
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  .show-title {
+    font-size: 2.2rem;
+  }
+
+
+  body {
+    padding: 40px;
+  }
+
+  .navbar {
+    padding: 2.5rem;
+    font-size: 1.8rem;
+  }
+
+  .nav-link {
+    font-size: 1.8rem;
+    padding-right: 10rem;
+    padding-left: 10rem;
+  }
+
+ 
+}
+
+/* Larger screens (large desktops) */
+@media only screen and (min-width: 1201px) {
+  .show-title {
+    font-size: 2.5em;
+  }
+
+
+ 
+  body {
+    padding: 50px;
+  }
+
+  .navbar {
+    padding: 3rem;
+    font-size: 2rem;
+  }
+
+  .nav-link {
+    font-size: 2rem;
+    padding-right: 12rem;
+    padding-left: 12rem;
+  }
 }
