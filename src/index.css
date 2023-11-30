@@ -153,6 +153,10 @@
 
 }
 
+.underline:hover {
+  background-color: blue;
+}
+
 .totalObjects {
   color: white;
   border: 1px solid silver;
@@ -342,7 +346,7 @@ input[type="submit"]:hover {
 }
 
 .planet-details-image {
-  width: 50%;
+  width: 33%;
   height: auto;
 }
 

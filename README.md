@@ -29,4 +29,22 @@ Shout Out to all of the Pursuit 10.2 Nights and Weekends Cohort and instructiona
 
 ---
 
-**Happy coding!**
+## Project Docs
+
+Trello for project management (https://trello.com/b/YgRhW6WT/project-board)
+
+Front-end repo on github (https://github.com/AlexanderTsiklidis1/cosmos-app-front-end)
+
+Back-End repo on github (https://github.com/AlexanderTsiklidis1/cosmos-app-back-end)
+
+Deployed Front-end website on netlify (https://timely-gingersnap-37dfa8.netlify.app)
+
+Deployed Back-end Server on Render ()
+
+**Coming Soon!**
+
+-More efficiently partitioned data such as moons seperate from planets, seperate from stars.
+-Users will be able to build resources like moons, planets and stars that get stored underneath their own tabs
+-Update input fields, and database to render more info on a planet.
+-User authentication, where a user can only access CRUD functionality on the app by logging in.
+
