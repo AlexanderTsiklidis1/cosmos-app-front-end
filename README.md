@@ -38,7 +38,7 @@ Back-End repo on github (https://github.com/AlexanderTsiklidis1/cosmos-app-back-
 
 Deployed Front-end website on netlify (https://timely-gingersnap-37dfa8.netlify.app)
 
-Deployed Back-end Server on Render ()
+Deployed Back-end Server on Render (https://cosmos-app-back-end.onrender.com)
 
 **Coming Soon!**
 
