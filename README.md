@@ -1,4 +1,4 @@
-# Alexander Tsiklids' COSMOS APP
+# Alexander Tsiklidis' COSMOS APP
 
 ## Overview
 
@@ -9,7 +9,6 @@ Additionally, a user will be able to delete as well as update an existing celest
 Lastly, a user will be able to create their own celestial object. This too is subject to admin review.
 
 The Cosmos app is comprised of two repositiories a front-end application that communicates with a back-end server to render our celestial objects  and reply data.
-
 
 ## Getting Started
 
@@ -44,7 +43,9 @@ Deployed Back-end Server on Render ()
 **Coming Soon!**
 
 -More efficiently partitioned data such as moons seperate from planets, seperate from stars.
--Users will be able to build resources like moons, planets and stars that get stored underneath their own tabs
--Update input fields, and database to render more info on a planet.
--User authentication, where a user can only access CRUD functionality on the app by logging in.
 
+-Users will be able to build resources like moons, planets and stars that get stored underneath their own tabs
+
+-Update input fields, and database to render more info on a planet.
+
+-User authentication, where a user can only access CRUD functionality on the app by logging in.
