@@ -49,3 +49,8 @@ Deployed Back-end Server on Render (https://cosmos-app-back-end.onrender.com)
 -Update input fields, and database to render more info on a planet.
 
 -User authentication, where a user can only access CRUD functionality on the app by logging in.
+
+**Stretch Goals!**
+
+1- Hover effects and cohesive styling on every page
+2- Uses extra field values for data in back-end (more then 7)
