@@ -13,7 +13,7 @@ function Home() {
         <li className="feature-item">4 - Delete an existing celestial object</li>
         <li className="feature-item">5 - Go ahead and click on the "Celestial Objects" section to view our database of the Cosmos; or on "New Celestial Object", to create a new celestial object for our database -- Subject to Admin Review </li>
       </ul>
-      <p className="description">We do hope you enjoy our COSMOS app, and please tell your friends and spread the word!</p>
+      <p className="description">We hope you enjoy our COSMOS app, and please tell your friends and spread the word!</p>
     </div>
   );
 }
