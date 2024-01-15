@@ -16,8 +16,7 @@ Please use the deployed front-end website on netlify(https://timely-gingersnap-3
 
 ### Prerequisites
 
-
-As stated above, you will need to go live on both the front-end application and back-end server in order to make full use of teh COSMOS app
+As stated previously, you will need to go live on both the front-end application and back-end server in order to make full use of teh COSMOS app
 
 ## Contributing
 
