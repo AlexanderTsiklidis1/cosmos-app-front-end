@@ -3,7 +3,6 @@ import React from 'react';
 
 function Home() {
   return (
-    
     <div className="home-container">
       <h2 className="welcome-header">Welcome to the COSMOS App!</h2>
       <p className="description">Using our COSMOS App, you will be able to:</p>
